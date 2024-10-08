@@ -57,12 +57,12 @@ enum ion_heap_type {
  * bits are reserved for use by the heaps themselves.
  */
 #define ION_FLAG_CACHED 1		/* mappings of this buffer should be
-					   cached, ion will do cache
-					   maintenance when the buffer is
-					   mapped for dma */
+						cached, ion will do cache
+						maintenance when the buffer is
+						mapped for dma */
 #define ION_FLAG_CACHED_NEEDS_SYNC 2	/* mappings of this buffer will created
-					   at mmap time, if this is set
-					   caches must be managed manually */
+						at mmap time, if this is set
+						caches must be managed manually */
 
 /**
  * DOC: Ion Userspace API
@@ -142,7 +142,7 @@ struct ion_phys_data {
  * populated with the opaque handle for the allocation.
  */
 #define ION_IOC_ALLOC		_IOWR(ION_IOC_MAGIC, 0, \
-				      struct ion_allocation_data)
+						struct ion_allocation_data)
 
 /**
  * DOC: ION_IOC_FREE - free memory
@@ -200,5 +200,7 @@ struct ion_phys_data {
 #define ION_IOC_CUSTOM		_IOWR(ION_IOC_MAGIC, 6, struct ion_custom_data)
 
 #define ION_IOC_PHYS		_IOWR(ION_IOC_MAGIC, 8, struct ion_phys_data)
+
+#endif /* _UAPI_LINUX_ION_H */
 
 #endif /* _UAPI_LINUX_ION_H */
